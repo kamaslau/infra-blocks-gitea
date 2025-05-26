@@ -86,7 +86,7 @@ docker compose up -d
 ```bash
 docker run --name gitea-runner \
 -d \
---restart always \
+--restart unless-stopped \
   -e GITEA_INSTANCE_URL=https://your_gitea.com \
   -e GITEA_RUNNER_REGISTRATION_TOKEN=your_token \
   -v /var/run/docker.sock:/var/run/docker.sock \

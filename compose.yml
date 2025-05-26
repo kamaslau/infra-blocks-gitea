@@ -1,3 +1,5 @@
+name: trial-gitea
+
 networks:
   gitea:
 
@@ -7,12 +9,10 @@ volumes:
 services:
   gitea:
     container_name: gitea
-    image: gitea/gitea:latest-rootless
-    # image: gitea/gitea:latest
-    restart: always
-    env_file: .env
+    # image: gitea/gitea:latest-rootless
+    image: gitea/gitea:latest
+    restart: unless-stopped
     ports:
-      # Should match Nginx/gateway confs
       - ${PORT-3000}:3000
       - ${PORT_SSH-2222}:2222
     networks:
