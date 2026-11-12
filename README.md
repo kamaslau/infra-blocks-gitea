@@ -1,5 +1,8 @@
 # infra-blocks-gitea
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+![Repository size](https://img.shields.io/github/repo-size/kamaslau/infra-blocks-gitea?color=56BEB8)
+
 [官方网站](https://docs.gitea.com/)
 [安装说明](https://docs.gitea.com/installation/install-with-docker-rootless)
 
