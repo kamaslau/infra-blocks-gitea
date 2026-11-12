@@ -14,7 +14,7 @@ The test for any change: could someone who has never seen this repository run it
 
 ## Pull requests
 
-- **Ports come from `.env`.** If you add a variable, add it to `.env.example` (or `.env.sample`) with a working default, and mention it under Service URL.
+- **Ports come from `.env`.** If you add a variable, add it to `.env.example` with a working default, and mention it under Service URL.
 - **The README is English.** Chinese belongs only under *Notes for deployments in China*. That section exists because it is the part a foreign HQ cannot supply; mixed into the body, it stops being findable.
 - **`Verify` has to keep proving something.** Any behaviour change updates the command in that section. A `Verify` that returns success while the service is down is worse than no `Verify`.
 - **Credentials stay marked local-only.** If a change makes the default credential reachable from outside the host, say so in the README in the same commit.

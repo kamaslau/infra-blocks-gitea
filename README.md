@@ -54,7 +54,7 @@ _Registry Mirrors_ 部分应当有相应内容。
 
 ```bash
 # Initiate .env file
-cp .env.sample .env
+cp .env.example .env
 # Start services
 docker compose up -d
 ```
