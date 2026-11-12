@@ -1,4 +1,4 @@
-# trial-gitea
+# infra-blocks-gitea
 
 [官方网站](https://docs.gitea.com/)
 [安装说明](https://docs.gitea.com/installation/install-with-docker-rootless)
