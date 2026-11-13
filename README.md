@@ -120,4 +120,4 @@ If the instance is served over HTTPS through [infra-blocks-caddy](https://github
 
 ---
 
-Part of [infrastructure blocks](https://github.com/kamaslau/infra-blocks) · ← back to index
+Part of [infrastructure blocks](https://github.com/kamaslau/infra-blocks) · ← back to index · [what I do](https://www.kamaslau.com/works?utm_source=github&utm_medium=repo-readme&utm_campaign=always-on&utm_content=unit)
