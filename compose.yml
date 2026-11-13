@@ -19,9 +19,24 @@ services:
       - gitea
     volumes:
       - gitea_data:/data
-      - ./config:/etc/gitea/conf
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     environment:
       - USER_UID=1000
       - USER_GID=1000
+      # Config lives in the volume rather than in a tracked app.ini: Gitea rewrites
+      # that file on every start, and a JWT secret in git is a secret in git.
+      - GITEA__security__INSTALL_LOCK=true
+      - GITEA__service__DISABLE_REGISTRATION=true
+      - GITEA__repository__FORCE_PRIVATE=true
+      - GITEA__other__ENABLE_FEED=false
+      - GITEA__ui.user__REPO_PAGING_NUM=20
+      - GITEA__server__ROOT_URL=${ROOT_URL-http://localhost:3000/}
+      - GITEA__server__SSH_DOMAIN=${SSH_DOMAIN-localhost}
+      - GITEA__server__SSH_PORT=${PORT_SSH-2222}
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1:3000/api/healthz || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
